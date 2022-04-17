@@ -14,17 +14,16 @@ int identifierToPrint(char next, va_list arg)
 {
 	int i;
 
-	findIdentifierStruct idenStruct[] = {
+	identifierStruct funs[] = {
 		{"c", print_char},
 		{"s", print_str},
-
 		{NULL, NULL}
 	};
 
-	for (i = 0; idenStruct[i].identifier != NULL; i++)
+	for (i = 0; funs[i].identifier != NULL; i++)
 	{
-		if (idenStruct[i].identifier[0] == next)
-			return (idenStruct[i].printer(arg));
+		if (funs[i].identifier[0] == next)
+			return (funs[i].printer(arg));
 	}
 	return (0);
 }
@@ -38,7 +37,8 @@ int identifierToPrint(char next, va_list arg)
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i, indentifier = 0, character = 0;
+	unsigned int i;
+	int identifier = 0, character = 0;
 	va_list list;
 
 	va_start(list, format);

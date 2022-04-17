@@ -5,17 +5,18 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-
+int print_char(va_list arg);
+int print_str(va_list arg);
 /**
  * struct findIdentifierStruct - structure definition
  * @identifier: type
  * @printer: function to print
  */
 
-typedef strcut findIdentifierStruct
+typedef struct identifierStruct
 {
 	char *identifier;
 	int (*printer)(va_list);
-} findIdentifierStruct;
+} identifierStruct;
 
 #endif
