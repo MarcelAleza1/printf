@@ -17,6 +17,14 @@ int identifierToPrint(char next, va_list arg)
 	identifierStruct funs[] = {
 		{"c", print_char},
 		{"s", print_str},
+		{"d", print_int},
+		{"i", print_int},
+		{"u", print_unsigned},
+		{"b", print_unsignedToBinaray},
+		{"o", print_oct},
+		{"x", print_hex},
+		{"X", print_HEX},
+		{"S", print_STR},
 		{NULL, NULL}
 	};
 
