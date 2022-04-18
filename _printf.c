@@ -20,7 +20,7 @@ int identifierToPrint(char next, va_list arg)
 		{"d", print_int},
 		{"i", print_int},
 		{"u", print_unsigned},
-		{"b", print_unsignedToBinaray},
+		{"b", print_unsignedToBinary},
 		{"o", print_oct},
 		{"x", print_hex},
 		{"X", print_HEX},

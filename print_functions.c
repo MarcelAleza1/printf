@@ -28,12 +28,12 @@ int print_int(va_list arg)
 	{
 		_putchar('-');
 		character++;
-		n = n * -1;
+		num = num * -1;
 	}
 
 	for (i = 0; num / div > 9; i++, div = div * 10)
 		;
-	for (; div >= 1; n %= div, div /= 10, character++)
+	for (; div >= 1; num %= div, div /= 10, character++)
 	{
 		mod = num / div;
 		_putchar('0' + mod);
@@ -53,7 +53,7 @@ int print_str(va_list arg)
 	char *str = va_arg(arg, char*);
 
 	if (str == NULL)
-		srt = "(null)";
+		str = "(null)";
 	else if (*str == '\0')
 		return (-1);
 
@@ -78,7 +78,7 @@ int print_STR(va_list arg)
 
 	for (i = 0; str[i]; i++)
 	{
-		if ((Str[i] < 32 && str[i] > 0) || str[i] >= 127)
+		if ((str[i] < 32 && str[i] > 0) || str[i] >= 127)
 			{
 
 				_putchar('\\');
