@@ -53,7 +53,7 @@ int print_oct(va_list arg)
 
 }
 
-int print_unsignedToHex(unsigned int num, char _case)
+int print_unsignedIntToHex(unsigned int num, char _case)
 {
 	unsigned int num2;
 	int i, j, rem, chars = 0;
